@@ -1,4 +1,4 @@
-FROM golang:1.11-alpine AS build
+FROM swift AS build
 FROM scratch
-COPY --from=build /usr/bin/go /usr/bin/
+COPY --from=build /usr/bin/swiftc /usr/bin/
 # CMD [ "go","--help" ]
